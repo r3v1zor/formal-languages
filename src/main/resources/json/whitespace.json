@@ -1,0 +1,19 @@
+{
+  "startNode": {
+    "pattern": ""
+  },
+  "endNodes": [" "],
+  "weight": 1,
+  "nodes": {
+    "": {
+      "pattern": ""
+    },
+    " ": {
+      "pattern": " "
+    }
+  },
+  "connections": {
+    "": [" "],
+    " ": [" "]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "startNode": {
+    "pattern": ""
+  },
+  "endNodes": ["e", "t", "g", "r", "n"],
+  "weight": 1,
+  "nodes": {
+    "": {
+      "pattern": ""
+    },
+    "B": {
+      "pattern": "B"
+    },
+    "C": {
+      "pattern": "C"
+    },
+    "D": {
+      "pattern": "D"
+    },
+    "F": {
+      "pattern": "F"
+    },
+    "I": {
+      "pattern": "I"
+    },
+    "L": {
+      "pattern": "L"
+    },
+    "S": {
+      "pattern": "S"
+    },
+    "a": {
+      "pattern": "a"
+    },
+    "b": {
+      "pattern": "b"
+    },
+    "c": {
+      "pattern": "c"
+    },
+    "d": {
+      "pattern": "d"
+    },
+    "e": {
+      "pattern": "e"
+    },
+    "f": {
+      "pattern": "f"
+    },
+    "g": {
+      "pattern": "g"
+    },
+    "h": {
+      "pattern": "h"
+    },
+    "i": {
+      "pattern": "i"
+    },
+    "l": {
+      "pattern": "l"
+    },
+    "n": {
+      "pattern": "n"
+    },
+    "o": {
+      "pattern": "o"
+    },
+    "r": {
+      "pattern": "r"
+    },
+    "s": {
+      "pattern": "s"
+    },
+    "t": {
+      "pattern": "t"
+    },
+    "u": {
+      "pattern": "u"
+    },
+    "y": {
+      "pattern": "y"
+    }
+  },
+  "connections": {
+    "": ["b","s","i","l","c","f","d","b","S","B","S","I","L","C","F","D","B"],
+    "a": ["r", "c", "t", "n"],
+    "B": ["y", "o"],
+    "b": ["y", "l", "o"],
+    "C": ["h"],
+    "c": ["t", "h"],
+    "D": ["o"],
+    "d": ["o"],
+    "e": ["a", "r", "g"],
+    "F": ["l"],
+    "f": ["l"],
+    "g": ["e"],
+    "h": ["a", "o"],
+    "I": ["n"],
+    "i": ["n"],
+    "L": ["o"],
+    "l": ["e", "o"],
+    "n": ["t", "g"],
+    "o": ["a", "r", "u", "l", "n", "o"],
+    "r": ["a", "t", "i"],
+    "S": ["t", "h"],
+    "s": ["h"],
+    "t": ["r", "e"],
+    "u": ["b"],
+    "y": ["t"]
+  }
+
+}

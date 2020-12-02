@@ -1,0 +1,24 @@
+{
+  "startNode": {
+    "pattern": ""
+  },
+  "endNodes": ["f", "e"],
+  "weight": 1,
+  "nodes": {
+    "": {
+      "pattern": ""
+    },
+    "s": {"pattern": "s"},
+    "e": {"pattern": "e"},
+    "f": {"pattern": "f"},
+    "i": {"pattern": "i"},
+    "l": {"pattern": "l"}
+  },
+  "connections": {
+    "": ["i","e"],
+    "s": ["e"],
+    "e": ["l"],
+    "i": ["f"],
+    "l": ["s"]
+  }
+}

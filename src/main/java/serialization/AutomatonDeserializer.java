@@ -30,11 +30,14 @@ public class AutomatonDeserializer extends StdDeserializer<Automaton> {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode node = p.getCodec().readTree(p);
         String startNodeName = node.get("startNode").get("pattern").asText();
+        String endNodes = node.get("endNodes").toString();
+        Long weight = node.get("weight").asLong();
         String nodes = node.get("nodes").toString();
         String connections = node.get("connections").toString();
 
         Map<String, Node> nodesMap = mapper.readValue(nodes, new TypeReference<HashMap<String, Node>>() {});
         Map<String, List<String>> connectionsMap = mapper.readValue(connections, new TypeReference<HashMap<String, List<String>>>() {});
+        List<String> endNodesList = mapper.readValue(endNodes, new TypeReference<List<String>>() {});
 
         Node startNode = nodesMap.get(startNodeName);
 
@@ -57,6 +60,6 @@ public class AutomatonDeserializer extends StdDeserializer<Automaton> {
 
         });
 
-        return new Automaton(startNode, nodesMap);
+        return new Automaton(startNode, nodesMap, weight, endNodesList);
     }
 }

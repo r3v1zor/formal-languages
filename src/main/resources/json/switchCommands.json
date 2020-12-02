@@ -1,0 +1,35 @@
+{
+  "startNode": {
+    "pattern": ""
+  },
+  "endNodes": ["h", "e", "k"],
+  "weight": 1,
+  "nodes": {
+    "": {
+      "pattern": ""
+    },
+    "a": {"pattern": "a"},
+    "r": {"pattern": "r"},
+    "b": {"pattern": "b"},
+    "c": {"pattern": "c"},
+    "s": {"pattern": "s"},
+    "t": {"pattern": "t"},
+    "e": {"pattern": "e"},
+    "w": {"pattern": "w"},
+    "h": {"pattern": "h"},
+    "i": {"pattern": "i"},
+    "k": {"pattern": "k"}
+  },
+  "connections": {
+    "": ["s","c","b"],
+    "a": ["s", "k"],
+    "r": ["e"],
+    "b": ["r"],
+    "c": ["a", "h"],
+    "s": ["e", "w"],
+    "t": ["c"],
+    "e": ["a"],
+    "w": ["i"],
+    "i": ["t"]
+  }
+}

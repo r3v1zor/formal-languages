@@ -1,0 +1,78 @@
+{
+  "startNode": {
+    "pattern": ""
+  },
+  "endNodes": ["e", "k", "o", "r"],
+  "weight": 1,
+  "nodes": {
+    "": {
+      "pattern": ""
+    },
+    "a": {
+      "pattern": "a"
+    },
+    "b": {
+      "pattern": "b"
+    },
+    "c": {
+      "pattern": "c"
+    },
+    "d": {
+      "pattern": "d"
+    },
+    "e": {
+      "pattern": "e"
+    },
+    "f": {
+      "pattern": "f"
+    },
+    "h": {
+      "pattern": "h"
+    },
+    "i": {
+      "pattern": "i"
+    },
+    "k": {
+      "pattern": "k"
+    },
+    "l": {
+      "pattern": "l"
+    },
+    "n": {
+      "pattern": "n"
+    },
+    "o": {
+      "pattern": "o"
+    },
+    "r": {
+      "pattern": "r"
+    },
+    "t": {
+      "pattern": "t"
+    },
+    "u": {
+      "pattern": "u"
+    },
+    "w": {
+      "pattern": "w"
+    }
+  },
+  "connections": {
+    "": ["c","b","d","w","f"],
+    "a": ["k"],
+    "b": ["r"],
+    "c": ["o"],
+    "d": ["o"],
+    "e": ["a"],
+    "f": ["o"],
+    "h": ["i"],
+    "i": ["l", "n"],
+    "l": ["e"],
+    "n": ["t", "u"],
+    "o": ["r", "n"],
+    "r": ["e"],
+    "t": ["i"],
+    "u": ["e"],
+    "w": ["h"]
+  }
+}

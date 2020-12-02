@@ -7,11 +7,15 @@ import serialization.AutomatonSerializer;
 import util.Pair;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @JsonSerialize(using = AutomatonSerializer.class)
 @JsonDeserialize(using = AutomatonDeserializer.class)
 public class Automaton {
+    private String name;
+    private Long weight = 0L;
+    private List<String> endNodes;
     private Node startNode;
     private Map<String, Node> nodes;
 
@@ -22,6 +26,35 @@ public class Automaton {
     public Automaton(Node startNode, Map<String, Node> nodes) {
         this.startNode = startNode;
         this.nodes = nodes;
+    }
+
+    public Automaton(Node startNode, Map<String, Node> nodes, Long weight) {
+        this.startNode = startNode;
+        this.nodes = nodes;
+        this.weight = weight;
+    }
+
+    public Automaton(Node startNode, Map<String, Node> nodes, Long weight, List<String> endNodes) {
+        this.startNode = startNode;
+        this.nodes = nodes;
+        this.weight = weight;
+        this.endNodes = endNodes;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Long weight) {
+        this.weight = weight;
     }
 
     public Node getStartNode() {
@@ -48,11 +81,15 @@ public class Automaton {
         Pair<Boolean, Integer> result = Pair.of(false, 0);
 
         String str = sequence.substring(skip);
+        Node node = startNode;
 
         for (Character ch : str.toCharArray()) {
-            Node node = startNode.getNextNode(ch.toString());
+            String prevValue = node.getPattern();
+
+            node = node.getNextNode(ch.toString());
 
             if (node == null) {
+                result.setLeft(result.getLeft() && endNodes.contains(prevValue));
                 return result;
             }
 
